@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">English Step-by-Step</string>
+    <string name="intro_skip">Skip</string>
+    <string name="back_intro">Back</string>
+    <string name="next_intro">Next</string>
+    <string name="enter_to_app">Войти</string>
+    <string name="registration_to_app">Зарегистрироваться</string>
+    <string name="to_start">Начать</string>
+    <string name="to_determine_the_level">Определить уровень</string>
+    <string name="beginner">Beginner</string>
+    <string name="pre_intermediate">Pre-Intermediate</string>
+    <string name="elementary">Elementary</string>
+
+    <string-array name="intro_slider_heading">
+        <item>Just begin to learn ENGLISH</item>
+        <item>Little by little, step by step…</item>
+        <item> «The limits of my language are the limits of my world». (Ludwig Wittgenstein)</item>
+        <item> Join us and be better! </item>
+    </string-array>
+    <string-array name="intro_slider_description">
+        <item>Просто начни учить АНГЛИЙСКИЙ</item>
+        <item>Мало-помалу, шаг за шагом…</item>
+        <item>«Границы моего языка — это границы моего мира» (Людвиг Витгенштейн)</item>
+        <item> Присоединяйся и развивайся! </item>
+    </string-array>
+
+    <string name="transition_beginner">beginner</string>
+    <string name="transition_elementary">elementary</string>
+    <string name="transition_pre">pre</string>
+</resources>

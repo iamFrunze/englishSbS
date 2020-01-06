@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.StepsActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/cardview_beginner"
+        android:id="@+id/cardViewStepBeg"
+        android:transitionName="@string/transition_beginner"/>
+
+    <include layout="@layout/cardview_elementary"
+        android:id="@+id/cardViewStepEl"
+        android:transitionName="@string/transition_elementary"/>
+
+    <include layout="@layout/carview_preintermediate"
+        android:id="@+id/cardViewStepPre"
+        android:transitionName="@string/transition_pre"/>
+
+</LinearLayout>
