@@ -12,13 +12,13 @@
     <string name="elementary">Elementary</string>
 
     <string-array name="intro_slider_heading">
-        <item>Just begin to learn ENGLISH</item>
+        <item>Just begin to learn ENGLISH!</item>
         <item>Little by little, step by step…</item>
         <item> «The limits of my language are the limits of my world». (Ludwig Wittgenstein)</item>
         <item> Join us and be better! </item>
     </string-array>
     <string-array name="intro_slider_description">
-        <item>Просто начни учить АНГЛИЙСКИЙ</item>
+        <item>Просто начни учить АНГЛИЙСКИЙ!</item>
         <item>Мало-помалу, шаг за шагом…</item>
         <item>«Границы моего языка — это границы моего мира» (Людвиг Витгенштейн)</item>
         <item> Присоединяйся и развивайся! </item>
@@ -27,4 +27,23 @@
     <string name="transition_beginner">beginner</string>
     <string name="transition_elementary">elementary</string>
     <string name="transition_pre">pre</string>
+    <string name="change_lvl">Выберите уровень</string>
+    <string name="vocabulary">Vocabulary</string>
+    <string name="description_vocabulary">Words and expressions</string>
+    <string name="title_grammar">Grammar</string>
+    <string name="desc_grammar">Rules</string>
+    <string name="title_grammar_practice">Grammar</string>
+    <string name="description_grammar_practice">Practice</string>
+    <string name="title_reading">Reading</string>
+    <string name="description_reading"><![CDATA[Text & Task]]></string>
+    <string name="title_essay">Essay</string>
+    <string name="description_essay">Writing an essay</string>
+    <string name="title_audition">Audition</string>
+    <string name="description_audition"><![CDATA[Video & text]]></string>
+    <string name="transition_card_view_step">transitionCardViewStep</string>
+    <string name="transition_step">transitionStep</string>
+    <string name="transition_arrow">transitionArrow</string>
+    <string name="description_level_beginner">description_level</string>
+    <string name="description_level_elementary">description_level</string>
+    <string name="description_level_pre">description_level</string>
 </resources>

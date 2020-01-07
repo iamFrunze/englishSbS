@@ -8,7 +8,6 @@
     android:layout_marginTop="@dimen/mtrl_card_spacing"
     android:layout_marginRight="@dimen/mtrl_card_spacing"
     android:minHeight="200dp"
-    app:cardBackgroundColor="#0f4"
     tools:ignore="PrivateResource"
     android:focusable="true"
     android:clickable="true"
@@ -51,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="description_level"
+            android:text="@string/description_level_beginner"
             android:textSize="17sp"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/textViewBeginner" />

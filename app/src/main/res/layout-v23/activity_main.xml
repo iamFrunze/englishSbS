@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MainActivity">
+    tools:context=".activities.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
+        <include layout="@layout/m_toolbar"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -19,21 +19,18 @@
             android:textSize="34sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp"
-            android:text="Выбирите уровень"
+            android:text="@string/change_lvl"
             android:textAlignment="center"/>
 
         <include layout="@layout/cardview_beginner"
-            android:theme="@style/mCardView"
             android:id="@+id/cardViewBeginner"
             android:transitionName="@string/transition_beginner"/>
 
         <include layout="@layout/cardview_elementary"
-            android:theme="@style/mCardView"
             android:id="@+id/cardViewElementary"
             android:transitionName="@string/transition_elementary"/>
 
         <include layout="@layout/carview_preintermediate"
-            android:theme="@style/mCardView"
             android:id="@+id/cardViewPreIntermediate"
             android:transitionName="@string/transition_pre"/>
 

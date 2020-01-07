@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.IntroActivity">
+    tools:context=".activities.IntroActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -34,7 +34,7 @@
         app:piv_animationType="drop"
         app:piv_dynamicCount="true"
         app:piv_interactiveAnimation="true"
-        app:piv_selectedColor="@color/colorAccent"
+        app:piv_selectedColor="@color/mColorAccent"
         app:piv_unselectedColor="@color/design_default_color_on_secondary"
         app:piv_viewPager="@id/viewPager" />
 
@@ -46,7 +46,7 @@
         android:layout_marginBottom="40dp"
         android:onClick="OnClickNextIntro"
         android:text="@string/next_intro"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/mColorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -58,7 +58,7 @@
         android:layout_marginBottom="40dp"
         android:onClick="OnClickBackIntro"
         android:text="@string/back_intro"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/mColorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

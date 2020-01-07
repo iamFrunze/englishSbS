@@ -1,4 +1,4 @@
-package com.byfrunze.englishstep_by_step.Adapters;
+package com.byfrunze.englishstep_by_step.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,16 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.byfrunze.englishstep_by_step.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class IntroAdapter extends PagerAdapter {
 

@@ -1,4 +1,4 @@
-package com.byfrunze.englishstep_by_step.Activities;
+package com.byfrunze.englishstep_by_step.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -9,10 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.byfrunze.englishstep_by_step.Adapters.IntroAdapter;
+import com.byfrunze.englishstep_by_step.adapters.IntroAdapter;
 import com.byfrunze.englishstep_by_step.R;
 import com.rd.PageIndicatorView;
-import com.rd.animation.type.AnimationType;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
