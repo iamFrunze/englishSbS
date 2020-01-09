@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentTransition();
         setContentView(R.layout.activity_main);
+        getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.background));
         ButterKnife.bind(this);
         toolbar.setTitle("English Step-by-Step");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));

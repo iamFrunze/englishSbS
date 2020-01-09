@@ -9,7 +9,10 @@ import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.ChangeBounds;
 import android.transition.Explode;
+import android.transition.Fade;
 import android.transition.Slide;
+import android.transition.Transition;
+import android.transition.TransitionSet;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Window;
@@ -36,6 +39,7 @@ public class QuestionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentTransition();
         setContentView(R.layout.activity_questions);
+        getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.background));
         ButterKnife.bind(this);
         toolbar.setTitle("Questions");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));

@@ -16,6 +16,7 @@ import android.transition.ChangeBounds;
 import android.transition.Explode;
 import android.transition.Transition;
 import android.transition.TransitionManager;
+import android.transition.TransitionSet;
 import android.transition.TransitionValues;
 import android.view.View;
 import android.view.Window;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 
 import com.byfrunze.englishstep_by_step.adapters.StepsAdapter;
 import com.byfrunze.englishstep_by_step.R;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;
@@ -47,12 +49,12 @@ public class StepsActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentTransition();
         setContentView(R.layout.activity_steps);
+        getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.background));
         ButterKnife.bind(this);
         toolbar.setTitle("Steps");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
@@ -72,11 +74,18 @@ public class StepsActivity extends AppCompatActivity {
             String transitionNameCV = getString(R.string.transition_card_view_step);
             String transitionNameTV = "StepTitle";
             String transitionNameTVDesc = "StepDesc";
+
+
+
+
             ActivityOptionsCompat optionsCompat = makeSceneTransitionAnimation(StepsActivity.this,
                     new Pair<>(cardView, transitionNameCV),
                     new Pair<>(textViewTitle, transitionNameTV),
                     new Pair<>(textViewDesc, transitionNameTVDesc));
             ActivityCompat.startActivity(StepsActivity.this, intent, optionsCompat.toBundle());
+        });
+        adapter.setOnItemLongClickListener( (pos, cardView) -> {
+            cardView.setElevation(15);
         });
 
     }
@@ -117,7 +126,7 @@ public class StepsActivity extends AppCompatActivity {
         changeBounds.setDuration(800);
 
         getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
-        getWindow().setSharedElementEnterTransition(changeBounds);
+//        getWindow().setSharedElementEnterTransition(set);
         getWindow().setAllowEnterTransitionOverlap(true);
         getWindow().setAllowReturnTransitionOverlap(true);
 

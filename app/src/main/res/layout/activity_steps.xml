@@ -3,37 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.StepsActivity">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewSteps"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".activities.StepsActivity">
-        <include layout="@layout/m_toolbar"/>
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:layout_collapseMode="pin"
+        android:background="@color/mColorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+
+        <include layout="@layout/m_toolbar" />
+
 
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardViewStepBeg"
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/backCardDark"
             android:layout_marginLeft="@dimen/mtrl_card_spacing"
             android:layout_marginTop="@dimen/mtrl_card_spacing"
             android:layout_marginRight="@dimen/mtrl_card_spacing"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:minHeight="200dp"
+            android:layout_marginBottom="@dimen/mtrl_card_spacing"
             android:transitionName="@string/transition_beginner"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp"
-            tools:ignore="PrivateResource"
-
-            >
+            tools:ignore="PrivateResource">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:padding="8dp">
 
                 <ImageView
@@ -54,6 +63,7 @@
                     android:layout_marginStart="16dp"
                     android:text="@string/beginner"
                     android:textSize="21sp"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/textViewDescriptionBeg"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -66,6 +76,7 @@
                     android:layout_marginStart="16dp"
                     android:text="@string/description_level_beginner"
                     android:textSize="17sp"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
                     app:layout_constraintTop_toBottomOf="@+id/textViewBeginner" />
 
@@ -75,15 +86,13 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardViewStepEl"
+            app:cardBackgroundColor="@color/backCardDark"
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/mtrl_card_spacing"
             android:layout_marginTop="@dimen/mtrl_card_spacing"
             android:layout_marginRight="@dimen/mtrl_card_spacing"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:minHeight="200dp"
+            android:layout_marginBottom="@dimen/mtrl_card_spacing"
             android:transitionName="@string/transition_elementary"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp"
@@ -112,6 +121,7 @@
                     android:layout_marginStart="16dp"
                     android:text="@string/elementary"
                     android:textSize="21sp"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/textViewDescriptionElem"
                     app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -124,6 +134,7 @@
                     android:layout_marginStart="16dp"
                     android:text="@string/description_level_elementary"
                     android:textSize="17sp"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toEndOf="@+id/imageView3"
                     app:layout_constraintTop_toBottomOf="@+id/textViewElementary" />
 
@@ -131,16 +142,14 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            app:cardBackgroundColor="@color/backCardDark"
             android:id="@+id/cardViewStepPre"
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/mtrl_card_spacing"
             android:layout_marginTop="@dimen/mtrl_card_spacing"
             android:layout_marginRight="@dimen/mtrl_card_spacing"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:minHeight="200dp"
+            android:layout_marginBottom="@dimen/mtrl_card_spacing"
             android:transitionName="@string/transition_pre"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp"
@@ -169,6 +178,7 @@
                     android:layout_marginStart="16dp"
                     android:text="@string/pre_intermediate"
                     android:textSize="21sp"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/textViewDescriptionPre"
                     app:layout_constraintStart_toEndOf="@+id/imageViewPre"
@@ -181,15 +191,13 @@
                     android:layout_marginStart="16dp"
                     android:text="@string/description_level_pre"
                     android:textSize="17sp"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toEndOf="@+id/imageViewPre"
                     app:layout_constraintTop_toBottomOf="@+id/textViewPre" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycleViewSteps"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

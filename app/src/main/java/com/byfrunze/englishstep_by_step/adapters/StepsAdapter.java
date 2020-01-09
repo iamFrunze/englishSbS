@@ -1,5 +1,6 @@
 package com.byfrunze.englishstep_by_step.adapters;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,15 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
         void onItemClickListener(int pos, MaterialCardView cardView, TextView textViewTitle, TextView textViewDesc);
     }
 
+    public interface OnItemLongClickListener{
+        void onItemLongClickListener(int pos, MaterialCardView cardView);
+    }
+    private OnItemLongClickListener onItemLongClickListener;
     private OnItemClickListener onItemClickListener;
+
+    public void setOnItemLongClickListener(OnItemLongClickListener onItemLongClickListener) {
+        this.onItemLongClickListener = onItemLongClickListener;
+    }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
@@ -43,6 +52,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
         holder.textViewStepDesc.setText("SADSADSADSAD");
     }
 
+
     @Override
     public int getItemCount() {
         return listSteps.size();
@@ -62,6 +72,13 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
                 if(onItemClickListener != null){
                     onItemClickListener.onItemClickListener(getAdapterPosition(), cardView, textViewStep, textViewStepDesc);
                 }
+            });
+
+            cardView.setOnLongClickListener(v -> {
+                if(onItemLongClickListener != null){
+                    onItemLongClickListener.onItemLongClickListener(getAdapterPosition(), cardView);
+                }
+                return true;
             });
         }
     }

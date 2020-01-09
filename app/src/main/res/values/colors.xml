@@ -4,4 +4,6 @@
     <color name="mColorPrimaryDark">#44036F</color>
     <color name="mColorAccent">#D2006B</color>
     <color name="white">#fff</color>
+    <color name="backCard">#983FD5</color>
+    <color name="backCardDark">#660099</color>
 </resources>

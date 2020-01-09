@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
@@ -11,19 +12,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-        <include layout="@layout/m_toolbar"/>
+        <include layout="@layout/m_toolbar"
+            android:elevation="4dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="34sp"
             android:textStyle="bold"
+            android:textColor="@color/white"
             android:layout_marginTop="8dp"
             android:text="@string/change_lvl"
             android:textAlignment="center"/>
 
         <include layout="@layout/cardview_beginner"
             android:id="@+id/cardViewBeginner"
+
             android:transitionName="@string/transition_beginner"/>
 
         <include layout="@layout/cardview_elementary"
@@ -40,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
+            android:elevation="2dp"
             android:text="@string/to_determine_the_level" />
     </LinearLayout>
 

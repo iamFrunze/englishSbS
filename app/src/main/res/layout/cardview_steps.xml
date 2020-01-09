@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/backCard"
         android:id="@+id/cardViewStepsItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +16,7 @@
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardCornerRadius="4dp"
-        app:cardElevation="4dp"
+        app:cardElevation="2dp"
         android:layout_marginLeft="@dimen/mtrl_card_spacing"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
@@ -35,7 +36,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/desc_grammar"
-                android:textSize="21sp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:transitionName="@string/transition_step"
                 app:layout_constraintBottom_toTopOf="@+id/textViewStepDesc"
@@ -47,9 +49,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textColor="@color/white"
                 android:transitionName="StepTitle"
                 android:text="@string/description_level_beginner"
-                android:textSize="17sp"
+                android:textSize="14sp"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
