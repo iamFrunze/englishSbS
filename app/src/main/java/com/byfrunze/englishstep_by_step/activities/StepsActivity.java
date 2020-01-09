@@ -5,6 +5,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
+import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -62,15 +64,18 @@ public class StepsActivity extends AppCompatActivity {
         List<String> test = testSteps();
         StepsAdapter adapter = new StepsAdapter(test);
         recyclerViewSteps.setAdapter(adapter);
-        adapter.setOnItemClickListener((pos, cardView, textView) -> {
+        adapter.setOnItemClickListener((pos, cardView, textViewTitle, textViewDesc) -> {
             Intent intent = new Intent(StepsActivity.this, QuestionsActivity.class);
             intent.putExtra("level", 0);
-            intent.putExtra("step", textView.getText());
+            intent.putExtra("stepTitle", textViewTitle.getText());
+            intent.putExtra("stepDesc", textViewDesc.getText());
             String transitionNameCV = getString(R.string.transition_card_view_step);
-            String transitionNameTV = getString(R.string.transition_step);
+            String transitionNameTV = "StepTitle";
+            String transitionNameTVDesc = "StepDesc";
             ActivityOptionsCompat optionsCompat = makeSceneTransitionAnimation(StepsActivity.this,
                     new Pair<>(cardView, transitionNameCV),
-                    new Pair<>(textView, transitionNameTV));
+                    new Pair<>(textViewTitle, transitionNameTV),
+                    new Pair<>(textViewDesc, transitionNameTVDesc));
             ActivityCompat.startActivity(StepsActivity.this, intent, optionsCompat.toBundle());
         });
 
@@ -107,9 +112,9 @@ public class StepsActivity extends AppCompatActivity {
     private void setContentTransition() {
 
         Explode explode = new Explode();
-        explode.setDuration(1000);
+        explode.setDuration(800);
         ChangeBounds changeBounds = new ChangeBounds();
-        changeBounds.setDuration(1000);
+        changeBounds.setDuration(800);
 
         getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
         getWindow().setSharedElementEnterTransition(changeBounds);

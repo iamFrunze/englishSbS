@@ -17,7 +17,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
     private List<String> listSteps;
 
     public interface OnItemClickListener{
-        void onItemClickListener(int pos, MaterialCardView cardView, TextView textView);
+        void onItemClickListener(int pos, MaterialCardView cardView, TextView textViewTitle, TextView textViewDesc);
     }
 
     private OnItemClickListener onItemClickListener;
@@ -40,6 +40,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textViewStep.setText(listSteps.get(position));
+        holder.textViewStepDesc.setText("SADSADSADSAD");
     }
 
     @Override
@@ -49,15 +50,17 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
 
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewStep;
+        TextView textViewStepDesc;
         MaterialCardView cardView;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewStep = itemView.findViewById(R.id.textViewStep);
+            textViewStep = itemView.findViewById(R.id.textViewStepTitle);
+            textViewStepDesc = itemView.findViewById(R.id.textViewStepDesc);
             cardView = itemView.findViewById(R.id.cardViewStepsItem);
             cardView.setOnClickListener(v -> {
                 if(onItemClickListener != null){
-                    onItemClickListener.onItemClickListener(getAdapterPosition(), cardView, textViewStep);
+                    onItemClickListener.onItemClickListener(getAdapterPosition(), cardView, textViewStep, textViewStepDesc);
                 }
             });
         }

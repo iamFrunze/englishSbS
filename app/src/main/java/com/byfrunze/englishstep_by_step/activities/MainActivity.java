@@ -9,6 +9,7 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.transition.Transition;
 import androidx.transition.TransitionValues;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.transition.ChangeBounds;
@@ -16,8 +17,12 @@ import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.SearchView;
 
 import com.byfrunze.englishstep_by_step.R;
 import com.google.android.material.card.MaterialCardView;
@@ -62,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setAllowReturnTransitionOverlap(true);
         Explode explode = new Explode();
         ChangeBounds changeBounds = new ChangeBounds();
-        changeBounds.setDuration(1000);
-        explode.setDuration(1000);
+        changeBounds.setDuration(800);
+        explode.setDuration(800);
         getWindow().setSharedElementExitTransition(changeBounds);
         getWindow().setExitTransition(explode);
         getWindow().setReenterTransition(explode);
@@ -96,4 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 .makeSceneTransitionAnimation(MainActivity.this, viewStart, transitionName);
         ActivityCompat.startActivity(MainActivity.this, intent, optionsCompat.toBundle());
     }
+
+
 }

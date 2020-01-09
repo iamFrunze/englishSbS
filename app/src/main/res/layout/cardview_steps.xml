@@ -20,27 +20,45 @@
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:layout_marginRight="@dimen/mtrl_card_spacing"
-        tools:ignore="PrivateResource">
+        tools:ignore="PrivateResource"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_margin="4dp"
             >
 
             <TextView
-                android:id="@+id/textViewStep"
+                android:id="@+id/textViewStepTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/desc_grammar"
+                android:textSize="21sp"
+                android:textStyle="bold"
                 android:transitionName="@string/transition_step"
+                app:layout_constraintBottom_toTopOf="@+id/textViewStepDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewStepDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:transitionName="StepTitle"
+                android:text="@string/description_level_beginner"
                 android:textSize="17sp"
+                android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="8dp"/>
+                app:layout_constraintTop_toBottomOf="@+id/textViewStepTitle" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:transitionName="StepDesc"
                 android:src="@drawable/ic_arrow_black_24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
